@@ -24,19 +24,21 @@ layout: default
 
   
   
-   {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">下一页</a>
-  {% endif %}
-  
-   <span class="page_number ">页码: {{ paginator.page }} of {{ paginator.total_pages }}</span>
    
-    {% if paginator.previous_page %}
+   {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
         <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">上一页</a>
       {% else %}
         <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">上一页</a>
       {% endif %}
   {% endif %}
+   <span class="page_number ">页码: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+   
+   {% if paginator.next_page %}
+    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">下一页</a>
+  {% endif %}
+   
+    
    
   
 </div>
