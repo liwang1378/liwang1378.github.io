@@ -1,10 +1,10 @@
 # Jekyll configuration
 
-name: 我的个人博客 - liw
-description: A jekyll theme
+name: 我的个人博客
+description: IT编程 - 个人学习笔记
 
 # url is currently only used only for the RSS feed in feed.xml
-url: https://scotte.github.io/jekyll-clean
+url: https://liwang1378.github.io/
 
 # baseurl will often be '', but for a project page on gh-pages, it needs to
 # be the project name.
@@ -14,7 +14,7 @@ url: https://scotte.github.io/jekyll-clean
 baseurl: ''
 
 # These can be '' to hide the Github or Gitlab nav buttons
-github: 'scotte/jekyll-clean'
+github: ''
 gitlab: ''
 
 # Set this to your UA-# value, or '' to disable the block completely
