@@ -36,13 +36,9 @@ NoSQL系统：Mongo、Memcache、Redis
 
 举例说明:
 
-商名名称	供应商名称	价格	描述		重量	﻿	供应商电话	﻿有效期﻿	﻿分类
-
-﻿
-ipad	apple		2999	 	250g	400-025-123	2014.12	饮料
-
-
-ipad	Microsoft	1999	 	﻿250g﻿	800-025-321	2014.9	饮料
+	商名名称	供应商名称	价格	描述		重量	﻿	供应商电话	﻿有效期﻿	﻿分类﻿
+	ipad		apple		2999	 	250g	400-025-123		2014.12	饮料
+	ipad		Microsoft	1999	 	﻿250g﻿	800-025-321		2014.9	饮料
 
 供应商与商品之间是多对多关系，以上例（商口名称与供应商名称）组合关键字才能唯一标识一件商品。
 
@@ -58,13 +54,9 @@ ipad	Microsoft	1999	 	﻿250g﻿	800-025-321	2014.9	饮料
 
 如果数据表中不存在非关键字段对任意候选关键字段的传递函数依赖则符合第三范式。
 
- 
-
-商名名称	价格	描述	重量	﻿有效期﻿	﻿分类﻿	分类描述
-
-ipad	2999	 	250g	2014.12	电子产品	日常应用
-
-ipad	1999	 	﻿250g﻿	2014.9	 移动设备	移动办公
+	商名名称	价格	描述	重量	﻿有效期﻿	﻿分类﻿	分类描述
+	ipad	2999	 	 250g	2014.12	电子产品	日常应用
+	ipad	1999	 	﻿250g﻿	2014.9	 移动设备	移动办公
 
 ﻿(商品名称) -> (分类) -> (分类描述)，即非关键字段"分类描述"对关键字段"商品名称"的传递函数依赖
 
@@ -74,9 +66,9 @@ BC范式(BCNF)
 数据库表中如果不存在任何字段对任一候选关键字段的传递函数依赖，即如果是复合关键字，则复合关键字之间也不能存在函数依赖关系。
  
 
-供应商	商品ID	供应商联系人	商品数量
-联想	1	张三	10
-IBM	2	李四	20
+	供应商	商品ID	供应商联系人	商品数量
+	联想		1		张三		10
+	IBM		2		李四		20
  假定'候选主键字段'的决定关系为：
 
 (供应商，商品ID) -> (联系人，商品数量)
@@ -174,21 +166,21 @@ SQL代码
 select * from 表名 where match(全文索引字段名) against('查询关键字');   
 4、唯一索引,unique可以有多个null值
 
-create unique index indexName on tableName(fieldName);
+	create unique index indexName on tableName(fieldName);
 
 查询索引
 
-desc tableName;
-
-show index from tableName;
-
-show keys from tableName;
+	desc tableName;
+	
+	show index from tableName;
+	
+	show keys from tableName;
 
 删除索引
 
-alter table 表名 drop index 索引名；
-
-alter table 表名 drop primary key;
+	alter table 表名 drop index 索引名；
+	
+	alter table 表名 drop primary key;
 
 创建索引的选择建议：
 
@@ -202,7 +194,7 @@ c、该字段的内容不经常频繁的修改变动
 
 explain命令可以显示的SQL预执行的详细信息，利于分析优化SQL
 
-explain select * from dept where name = '515ai'\G
+	explain select * from dept where name = '515ai'\G
 
 1、创建多列复合索引，只要查询条件使用最左边的索引，索引生效
 

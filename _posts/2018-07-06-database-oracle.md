@@ -9,10 +9,10 @@ comments: false
 
 	公司					产品名称
 	微软				   	access/sqlserver
-	瑞典AB公司			mysql
+	瑞典AB公司				mysql
 	IBM					db2/informix
-	Sysbase				sysbase
-	oracle				oracle
+	Sysbase					sysbase
+	oracle					oracle
  
 
 1、oracle的安装
