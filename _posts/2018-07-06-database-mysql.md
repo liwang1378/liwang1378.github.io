@@ -92,6 +92,8 @@ select goods_id,goods_name from tdb_goods as g inner join tdb_goods_cates as c o
 left join  左外连接 #显示左表的全部记录及右表符合连接条件的记录  
   
 right join 右外连接 #显示右表的全部记录及左表符合连接条件的记录  
+
+# [on/where/having查询条件的区别](https://www.cnblogs.com/sky6699/p/5238584.html)
   
 多表更新 
  
