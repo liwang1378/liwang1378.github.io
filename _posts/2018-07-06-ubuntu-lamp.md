@@ -172,3 +172,14 @@ chown -R username:username /var/ftp #设置ftp目录所属
 #非常重点：/etc/pam.d目录下，将vsftpd文件内容全部注释
 #或将vsftpd.conf的配置pam_service_name=vsftpd注释，否则出现530拒绝错误
 ```
+
+安装tomcat
+==========
+
+```
+vim /etc/profile	#配置环境变量
+export JAVA_HOME=/usr/lib/jdk/jdk1.8
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=.:${JAVA_HOME}/bin:$PATH
+```

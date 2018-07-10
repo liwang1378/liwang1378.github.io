@@ -1,3 +1,5 @@
 _cache
 _site
 /images/Thumbs.db
+id_rsa
+id_rsa.pub
